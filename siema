@@ -1,0 +1,58 @@
+<hill version="DSJ4-1.7.0" author="Tomasz Adamczewski">
+	<location latitude="46.961633" longitude="10.994235" orientation="100" timezone="1" altitude="3000"/>
+	<weather pollution="0.0" firstsnow="300" lastsnow="90" maxsnow="1.5" precipitationprobability="0.1" fogprobability="0.1"/>
+	<inrun>
+		<profile e="200" es="20" t="8.0" gamma="33" alpha="2" r1="138.0" s="4" b1="3.3" z0="0" l="0" f="0"/>
+		<startgate default="26" max="30" step="0.5" wind="6" z1="-0.8" z2="0.8" pz1="-0.69" pz2="0.69" t1="Textures\wood5b.png" m1="Materials\material1.xml" c1="0xaba7ab" t2="Textures\rust1.png" m2="Materials\material1.xml" c2="0xbbbbbb"/>
+		<gatenumbers z="-1.2" y="-0.18" size="0.2" c1="0xffffffff" c2="0x00415e8a"/>
+		<gatenumbers z="1.95" y="0.19" size="0.05" c1="0xffffffff" c2="0x00415e8a"/>
+		<startbanner z="0" text="BIGEC" textsize="0.2"/>
+		<frame bh="1" pt="false" snow="false" t0="Textures\concrete1.png" m0="Materials\material1.xml" c0="0x000000" t="Textures\concrete1.png" m="Materials\material1.xml" c="0xb9caed"/>
+		<flag x="7.0" z="4.45" hf="1.2" pf="1.375" hp="8.0" rb="0.04" rt="0.03" tf="Textures\flag-aut.png" mf="Materials\flag.xml" tp="Textures\wood1.png" mp="Materials\material1.xml" cp="0xffffff"/>
+		<guardrail z1="-2.5" z2="2.5" x="30"/>
+		<twigs lz="1.35" rz="-1.35"/>
+	</inrun>
+	<dhill>
+		<profile alpha="33" h="5000" n="7000" l1="70" l2="1000" a="134" beta-p="38" beta="48" beta-l="40" rl="500" r2="21" r2x="65" r2y="21" b0="50" bk="100" ba="150" hr="6" nr="50" ar="10" k="800" hs="850"/>
+		<fence t="Textures\fenceback.png" m="Materials\material1.xml" c="0xffffff"/>
+		<judgetower d="400" q="23" h="+6" t1="Textures\concrete5.png" m1="Materials\material1.xml" c1="0x8a8e99" t2="Textures\wood3.png" m2="Materials\material1.xml" c2="0x959183"/>
+		<lights step="50" size="2" h="20" d="20" r="0.60" g="0.65" b="0.70" attn="0.0005" range="200" t="Textures\rust1.png" m="Materials\metal.xml" c="0x999999"/>
+		<windflags h="2" d="4" t="Textures\rust1.png" m="Materials\metal.xml" c="0x999999"/>
+		<measurers c1="0x6984ab" c2="0x970b0e"/>
+		<label d="160" text="BIGEC" textsize="4.0"/>
+		<plastic c="0x769391"/>
+		<lines summer-min="500" summer-max="2000" winter-min="500" winter-max="2000" />
+		<numbers min="250" max="990"/>
+	</dhill>	
+
+	<profile id="inrun-terrain">
+        <start refx="inrun" x="-150" y="60"/>
+        <line refx="inrun" x="-100" y="6.375"/>
+        <line refx="dhill" x="-90" y="4.0"/>
+        <line refx="dhill" x="-60" y="3.0"/>
+        <line refx="dhill" x="-50" y="2.5"/>
+        <line refx="dhill" x="-45" y="2.3"/>
+        <line refx="dhill" x="-35" y="2.2"/>
+        <line refx="dhill" x="-15" y="2.1"/>
+        <line refx="dhill" x="-5" y="2.05"/>
+        <line refx="dhill" x="0" y="0"/>
+    </profile>
+    
+    <profile id="inrun-right" side="right" maxstep="1000">
+        <start x="0" y="-1.5" refx="inrun"/>
+        <line x="0" y="-1.5" refx="dhill"/>
+    </profile>
+    
+    <profile id="inrun-left" side="left" maxstep="1000">
+        <start x="0" y="1.5" refx="inrun"/>
+        <line x="0" y="1.5" refx="dhill"/>
+    </profile>
+    
+    <terrain>
+        <profile x0="-200" in="0.96" y0="-100" sd="520" fd="100" sc="1.3" sm="1.4" rs="6335" c1="0x443920" c2="0x5D603A" tsc="1" tsm="2"/>
+        <trees count="20000" minheight="10" maxheight="22" fractalthreshold="1" maxaltitude="360" normalaltitude="200" seed="503"/>
+        <houses count="100" minsaturation="0.0" maxsaturation="0.2" minfloors="1" maxfloors="3" maxaltitude="220" normalaltitude="100" fractalthreshold="0.3" seed="542"/>
+        <audience count="5000" d="20" x0="0" seed="500"/>
+    </terrain>
+	
+</hill>
